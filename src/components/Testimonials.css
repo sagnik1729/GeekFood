@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+
+.testimonials {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #ffffff, #f3f4f6);
+    padding: 3rem 10rem;
+    
+}
+
+/* 3) Card styling */
+.testimonial-card {
+    position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #6b7280;
+}
+
+/* 3a) Gradient border via pseudo-element */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #6366f1, #3b82f6, #06b6d4);
+    z-index: -1;
+    border-radius: 1.25rem;
+    filter: blur(8px);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+/* 4) Quote text */
+.testimonial-card p {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    color: #6b7280;
+}
+
+/* 5) Author block */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-author h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 1rem;
+    color: #1e293b;
+}
+
+.testimonial-author p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* 6) Hover effects */
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card:hover::before {
+    opacity: 0.8;
+}
