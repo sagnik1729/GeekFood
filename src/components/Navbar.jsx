@@ -6,7 +6,7 @@ const Navbar = () => (
     <nav className="navbar">
         <div className="navbar__logo">
             <img src={logo} alt="GeekFoods Logo" className="navbar__logo-img" />
-            GeekFood
+            GeekFoods
         </div>
         <ul className="navbar__links">
             {['Home', 'Quote', 'Restaurants', 'Foods', 'Contact'].map(link => (
